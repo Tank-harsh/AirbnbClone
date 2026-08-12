@@ -1,0 +1,261 @@
+body {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*navbar */
+.fa-compass{
+    color: rgb(189, 13, 13);
+  font-size: 2rem;
+}
+
+.navbar {
+  min-height: 5rem;
+  background-color: #ffffff !important;
+}
+
+/* .nav-link {
+  color: #222222 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #fe424d !important;
+} */
+
+ .search-btn {
+    background-color: #fe424d;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .search-btn:hover {
+    background-color: #e00b41;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .search-btn i {
+    font-size: 0.9rem;
+  }
+
+
+
+/* footer */
+
+  footer {
+    padding: 1.25rem 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    margin-top: auto;
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      padding: 1.5rem 3rem;
+    }
+  }
+
+  #mainfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    #mainfooter {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  .f-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem 0.6rem;
+    color: #222222;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    .f-info {
+      justify-content: flex-start;
+    }
+  }
+
+  .f-company {
+    font-weight: 500;
+  }
+
+  .info-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem 0.6rem;
+  }
+
+  .info-link a {
+    text-decoration: none;
+    color: #222222;
+    transition: color 0.2s ease;
+  }
+
+  .info-link a:hover {
+    text-decoration: underline;
+    color: #fe424d;
+    cursor: pointer;
+  }
+
+  .dot-separator {
+    user-select: none;
+    color: #717171;
+    font-weight: bold;
+  }
+
+  .f-social {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .f-social .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    color: #222222;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  }
+
+  .f-social .icon-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    color: #fe424d;
+  }
+
+  .f-social i {
+    font-size: 1.1rem;
+  }
+
+/* cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 1.2rem;
+}
+
+.card-img-top {
+  width: 100%;
+  border-radius: 1rem !important;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: 400;
+}
+
+/* card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover{
+opacity: 0.2;
+background-color: rgb(234, 231, 231);
+
+}
+
+
+/* home.ejs file filters */
+    #filters {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+      padding-top: 1rem;
+    }
+
+    .filter {
+      margin: 0.7rem;
+      text-align: center;
+      opacity: 0.7;
+      height: 50px;
+      max-width: fit-content;
+      background: transparent;
+      border: none;
+    }
+
+    .filter p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .filter:hover {
+      opacity: 1;
+      cursor: pointer;
+      border-bottom: 2px solid rgba(82, 102, 97, 0.286);
+    }
+
+
+/* show.ejs title  */
+
+.show-img{
+    min-height:30vh ;
+  object-fit: cover;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.btns {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+
+/*   Map   */
+#map {
+  height: 450px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.navbar-brand{
+  font-size: 40px;
+}
+
+
+ #marker {
+        background-image: url();
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
+
