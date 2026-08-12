@@ -30,7 +30,7 @@ app.engine("ejs", engine);
 app.use(express.static(path.join(__dirname, "public")));
 
 
-   const dbUrl=process.env.ATLASDB_url;
+   const dbUrl=process.env.ATLASDB_URL;
 
 main()
   .then(() => {
