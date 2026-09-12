@@ -54,8 +54,8 @@ secret: process.env.SECRET,
 
 });
   
-store.on("error",()=>{
-  console.log("ERROR IN MONGODB SESSION STORE  ",err)
+store.on("error", (err) => {
+  console.log("ERROR IN MONGODB SESSION STORE  ", err);
 });
 
 // flash message
@@ -95,6 +95,11 @@ app.use((req, res, next) => {
 });
 
 
+// Root Route - Redirect to /listings
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 //listings routes
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
@@ -112,6 +117,7 @@ app.use((err, req, res, next) => {
   res.render("listings/error.ejs", { statusCode, message });
 });
 
-app.listen(8080, () => {
-  console.log("server start");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`server start on port ${port}`);
 });
