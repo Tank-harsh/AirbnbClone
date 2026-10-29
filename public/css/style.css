@@ -27,15 +27,43 @@ body {
   color: #fe424d !important;
 } */
 
- .search-btn {
+ .search-bar-center {
+    max-width: 380px;
+    width: 100%;
+  }
+
+  .search-input {
+    min-width: 0;
+    border-radius: 25px;
+    border: 1.5px solid #ddd;
+    padding: 0.45rem 1rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .search-input:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.12);
+    outline: none;
+  }
+
+  @media (max-width: 575px) {
+    .search-bar-center {
+      max-width: 200px;
+    }
+  }
+
+  .search-btn {
     background-color: #fe424d;
     color: #ffffff;
     border-radius: 25px;
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 1rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     border: none;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: background-color 0.2s ease, transform 0.1s ease;
   }
 
@@ -43,13 +71,14 @@ body {
     background-color: #e00b41;
     color: #ffffff;
     cursor: pointer;
+    transform: scale(1.02);
   }
 
   .search-btn i {
     font-size: 0.9rem;
   }
 
-
+  .fw-500 { font-weight: 500; }
 
 /* footer */
 
@@ -188,10 +217,26 @@ background-color: rgb(234, 231, 231);
 /* home.ejs file filters */
     #filters {
       display: flex;
-      flex-wrap: wrap;
-      padding-left: 2rem;
-      padding-bottom: 2rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-left: 1rem;
+      padding-bottom: 1rem;
       padding-top: 1rem;
+      scrollbar-width: none; /* Firefox */
+      gap: 0.25rem;
+    }
+
+    #filters::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    @media (min-width: 768px) {
+      #filters {
+        flex-wrap: wrap;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+      }
     }
 
     .filter {
@@ -228,6 +273,18 @@ background-color: rgb(234, 231, 231);
   padding-right: 1rem;
 }
 
+@media (max-width: 575px) {
+  .show-card {
+    padding-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .show-img {
+    border-radius: 0 !important;
+  }
+}
+
 .btns {
   display: flex;
   margin-bottom: 2rem;
@@ -242,7 +299,7 @@ background-color: rgb(234, 231, 231);
 }
 
 .navbar-brand{
-  font-size: 40px;
+  font-size: clamp(24px, 5vw, 40px);
 }
 
 

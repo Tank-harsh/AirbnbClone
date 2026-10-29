@@ -2,7 +2,7 @@
 
   <br /><br />
   <div class="row">
-    <div class="col-5 offset-3">
+    <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
       <h2 class="mb-4">Edit your Listing</h2>
       <form method="POST" novalidate class="needs-validation" action="/listings/<%= Listing._id %>?_method=put"
         enctype="multipart/form-data">
@@ -22,7 +22,7 @@
         <!-- preview Image -->
         <div class="mb-3">
           Original Listing Image <br>
-          <img alt="listing image" src=" <%= OriginalImageUrl %> " />
+          <img alt="listing image" src=" <%= OriginalImageUrl %> " style="max-width:100%; height:auto; border-radius:8px;" />
         </div>
 
 
